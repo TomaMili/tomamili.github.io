@@ -57,7 +57,7 @@ const Background = () => {
         backgroundImage: "url('/background.jpg')",
         backgroundSize: "110% 110%",
         backgroundPosition: backgroundPosition,
-        scale, // Apply scale effect from scroll
+        scale,
       }}
     />
   );
