@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: Roboto Mono, monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Fade in text */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 1s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Backgorund svg*/
+
+.bg-svg {
+  height: 100dvh;
+  width: 100%;
+  background: url("/background.jpg");
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes distort {
+  0% {
+    transform: scale(1.02) skewX(0deg);
+  }
+  50% {
+    transform: scale(1.04) skewX(2deg);
+  }
+  100% {
+    transform: scale(1.02) skewX(0deg);
+  }
+}
+
+@keyframes scrollDistort {
+  0% {
+    transform: scale(1.02) skewY(0deg);
+  }
+  50% {
+    transform: scale(1.06) skewY(3deg);
+  }
+  100% {
+    transform: scale(1.02) skewY(0deg);
+  }
+}
+
+.distort-animation {
+  animation: distort 5s infinite alternate ease-in-out;
+}
+
+.scroll-distort {
+  animation: scrollDistort 3s infinite alternate ease-in-out;
+}
+/* Text animation */
+.sub {
+  color: #d1d5dc;
+  letter-spacing: 1em;
+}
+.glitch {
+  position: relative;
+  color: #d1d5dc;
+  font-size: 6em;
+  letter-spacing: 0.1em;
+  animation: glitch-skew 0.5s infinite linear alternate-reverse;
+  overflow: hidden;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #282010;
+  animation: glitch-anim 0.8s infinite ease alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #282010, 2px 2px #282010;
+  animation: glitch-anim2 0.8s infinite ease alternate-reverse;
+}
+
+/* Keyframes without Sass */
+@keyframes glitch-anim {
+  0% {
+    clip: rect(20px, 9999px, 30px, 0);
+  }
+  25% {
+    clip: rect(50px, 9999px, 60px, 0);
+  }
+  50% {
+    clip: rect(10px, 9999px, 40px, 0);
+  }
+  75% {
+    clip: rect(30px, 9999px, 50px, 0);
+  }
+  100% {
+    clip: rect(40px, 9999px, 70px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(30px, 9999px, 40px, 0);
+  }
+  25% {
+    clip: rect(20px, 9999px, 50px, 0);
+  }
+  50% {
+    clip: rect(60px, 9999px, 80px, 0);
+  }
+  75% {
+    clip: rect(10px, 9999px, 30px, 0);
+  }
+  100% {
+    clip: rect(50px, 9999px, 60px, 0);
+  }
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  25% {
+    transform: skew(1deg);
+  }
+  50% {
+    transform: skew(-2deg);
+  }
+  75% {
+    transform: skew(1deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
