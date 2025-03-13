@@ -114,7 +114,6 @@ html {
   animation: glitch-anim2 0.8s infinite ease alternate-reverse;
 }
 
-/* Keyframes without Sass */
 @keyframes glitch-anim {
   0% {
     clip: rect(20px, 9999px, 30px, 0);
