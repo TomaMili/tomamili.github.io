@@ -69,19 +69,15 @@ function Skills() {
             <p className="text-gray-300 ml-2 font-semibold">SQL </p>
           </Slider.Slide>
           <Slider.Slide>
-            <img src="public/next-svgrepo-com.svg" alt="redux" width="40px" />
+            <img src="/nextjs.svg" alt="redux" width="40px" />
             <p className="text-gray-300 ml-2 font-semibold">Next.js</p>
           </Slider.Slide>
           <Slider.Slide>
-            <img
-              src="public/tailwind-svgrepo-com (2).svg"
-              alt="tailwind"
-              width="40px"
-            />
+            <img src="/tailwindcss.svg" alt="tailwind" width="40px" />
             <p className="text-gray-300 ml-2 font-semibold">Tailwind</p>
           </Slider.Slide>
           <Slider.Slide>
-            <img src="public/redux-svgrepo-com.svg" alt="redux" width="35px" />
+            <img src="/reduxjs.svg" alt="redux" width="35px" />
             <p className="text-gray-300 ml-2 font-semibold">Redux.js</p>
           </Slider.Slide>
         </Slider>
