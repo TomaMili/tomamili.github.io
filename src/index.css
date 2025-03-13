@@ -4,9 +4,6 @@
   --font-roboto: Roboto Mono, monospace;
 }
 html {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 50px;
   scroll-behavior: smooth;
 }
 /* Fade in text */

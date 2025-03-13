@@ -14,7 +14,7 @@ function Aboutme() {
       </p>
 
       <a
-        href="TomaMilicevic_CV.pdf"
+        href="/TomaMilicevic_CV.pdf"
         download
         className="mt-10 flex items-center gap-1 justify-between"
       >

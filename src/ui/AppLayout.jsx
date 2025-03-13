@@ -13,7 +13,7 @@ function AppLayout() {
   return (
     <>
       <Background />
-      <div className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory overflow-x-hidden">
+      <div className="relative z-10 h-screen overflow-y snap-y snap-mandatory overflow-x-hidden scroll-pt-2">
         <Header />
         <Section>
           <Aboutme />
