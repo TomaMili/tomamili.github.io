@@ -10,7 +10,7 @@ function Education() {
             <h2 className="text-gray-300 uppercase font-semibold">
               Zagreb University of Applied Sciences - Informatics
             </h2>
-            <p>GPA - 4.3</p>
+            <p>GPA - 4.33</p>
             <p className="italic">2022 - present</p>
             <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
             <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
