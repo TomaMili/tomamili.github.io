@@ -12,8 +12,8 @@ function Education() {
             </h2>
             <p>GPA - 4.3</p>
             <p className="italic">2022 - present</p>
-            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 -left-20"></span>
-            <span className="absolute w-15 h-0.5 bg-gray-400 top-[37px] -left-20"></span>
+            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
+            <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
           </div>
           <div className="relative">
             <h2 className="text-gray-300 uppercase font-semibold">
@@ -24,9 +24,9 @@ function Education() {
               construction]
             </p>
             <p className="italic">2022</p>
-            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 -left-20"></span>
-            <span className="absolute w-15 h-0.5 bg-gray-400 top-[37px] -left-20"></span>
-            <span className="absolute w-0.5 h-34 bg-gray-400 -top-25 -left-[73px]"></span>
+            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
+            <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
+            <span className="absolute w-0.5 h-44 min-[432px]:-top-30 min-[432px]:h-40 min-[784px]:h-32 min-[784px]:-top-24 bg-gray-400 min-[1024px]:-top-30 min-[1024px]:h-40 -top-35  min-[1349px]:-top-25 min-[1349px]:h-34  sm:-left-[73px] -left-[57px]"></span>
           </div>
         </div>
         <div className="text-gray-400 mt-15">

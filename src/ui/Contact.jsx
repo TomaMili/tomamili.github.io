@@ -21,14 +21,17 @@ function Contact() {
         </p>
       </div>
       <div className="flex justify-between w-20 mt-10">
-        <a href="https://www.linkedin.com/in/toma-milićević-2057a7268/">
+        <a
+          href="https://www.linkedin.com/in/toma-milićević-2057a7268/"
+          target="_blank"
+        >
           <FontAwesomeIcon
             icon="fa-brands fa-linkedin"
             size="2xl"
             style={{ color: "#ffffff" }}
           />
         </a>
-        <a href="https://github.com/TomaMili?tab=repositories">
+        <a href="https://github.com/TomaMili?tab=repositories" target="_blank">
           <FontAwesomeIcon
             icon="fa-brands fa-github"
             size="2xl"

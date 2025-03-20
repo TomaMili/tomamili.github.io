@@ -164,3 +164,67 @@ html {
     transform: skew(0deg);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .glitch {
+    font-size: 56px;
+    z-index: 100;
+  }
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .glitch::before {
+    left: 1px;
+    text-shadow: -2px 0 #282010;
+    animation: glitch-anim 0.8s infinite ease alternate-reverse;
+  }
+
+  .glitch::after {
+    left: -1px;
+    text-shadow: -2px 0 #282010, 2px 2px #282010;
+    animation: glitch-anim2 0.8s infinite ease alternate-reverse;
+  }
+  @keyframes glitch-anim {
+    0% {
+      clip: rect(20px, 9999px, 70px, 0);
+    }
+    25% {
+      clip: rect(50px, 9999px, 130px, 0);
+    }
+    50% {
+      clip: rect(10px, 9999px, 90px, 0);
+    }
+    75% {
+      clip: rect(30px, 9999px, 110px, 0);
+    }
+    100% {
+      clip: rect(40px, 9999px, 150px, 0);
+    }
+  }
+
+  @keyframes glitch-anim2 {
+    0% {
+      clip: rect(30px, 9999px, 90px, 0);
+    }
+    25% {
+      clip: rect(20px, 9999px, 110px, 0);
+    }
+    50% {
+      clip: rect(60px, 9999px, 170px, 0);
+    }
+    75% {
+      clip: rect(10px, 9999px, 70px, 0);
+    }
+    100% {
+      clip: rect(50px, 9999px, 130px, 0);
+    }
+  }
+}

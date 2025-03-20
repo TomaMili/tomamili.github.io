@@ -7,7 +7,7 @@ function Skills() {
       <h1 className="text-6xl text-center uppercase font-semibold text-gray-300">
         Skills
       </h1>
-      <p className="text-center text-xl mt-20 text-gray-400 tracking-widest leading-9 lg:w-4xl w-7/8">
+      <p className="text-center sm:text-xl text-lg mt-20 text-gray-400 sm:tracking-widest sm:leading-9 leading-7 lg:w-4xl w-7/8">
         My strongest skills are tied with web-app development, with a good sense
         of teamwork and leadership. I consider myself very adaptable to
         different situations and enviroments.
@@ -82,7 +82,7 @@ function Skills() {
           </Slider.Slide>
         </Slider>
       </div>
-      <p className="text-center text-xl mt-20 text-gray-400 tracking-widest leading-9 lg:w-4xl w-7/8">
+      <p className="text-center sm:text-xl text-lg mt-20 text-gray-400 sm:tracking-widest sm:leading-9 leading-7 lg:w-4xl w-7/8">
         Besides these skills, I have a good knowledge of: C++, PHP, Python, as
         well as some creative platforms such as: Figma, Adobe Package, Office
         365

@@ -1,6 +1,7 @@
 function Project({ children, title, date, link }) {
   return (
     <a
+      target="_blank"
       className="relative group flex flex-col justify-between w-17/18"
       href={link}
     >
