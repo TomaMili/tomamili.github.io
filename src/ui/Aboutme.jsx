@@ -10,7 +10,14 @@ function Aboutme() {
         I am a Computer Science student that focuses on
         <span className="font-bold text-gray-300"> web-development</span>, I
         currently study and live in{" "}
-        <span className="font-bold text-gray-300">Zagreb, Croatia</span>.
+        <span className="font-bold text-gray-300">Zagreb, Croatia</span>. With 2
+        other partners I&apos;ve co-founded an AI startup called{" "}
+        <span className="font-bold text-gray-300">CINEO</span>. With this
+        project we have competed in
+        <span className="font-bold text-gray-300"> Mc2</span> competition and
+        won a ticket to{" "}
+        <span className="font-bold text-gray-300"> BIRD Incubator</span>, where
+        we are currently in developing in their incubation phase.
       </p>
 
       <a
