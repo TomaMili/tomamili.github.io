@@ -12,30 +12,33 @@ function Projects() {
       <div className="flex flex-col justify-around items-center sm:gap-10 gap-0 overflow-hidden">
         <div className="grid lg:grid-cols-2 lg:overflow-visible overflow-y-scroll w-4/5 mt-20 text-gray-400 gap-20 mx-auto">
           <Project
-            title={"Travel Tracking Web Application in React"}
-            date={"January 2025"}
-            link={"https://github.com/TomaMili/my-map-project"}
+            title={"Cineo"}
+            date={"December 2024 - now"}
+            link={"https://github.com/TomaMili/cineo-mc2"}
           >
-            A web application for tracking and logging travel routes using
-            OpenStreetMap API and React Router, allowing users to visualize
-            their journeys on an interactive map.
+            Cineo is an AI-driven movie library app — built with Next.js, React,
+            and Supabase — that lets you track, rate, organize and share your
+            favorite movies seamlessly. Primary goal in current phase is
+            developing an advanced reccomend algorithm based on machine
+            learning.
           </Project>
           <Project
-            title={"Movie Storage and Retrieval Web Application in React"}
-            date={"November 2024"}
-            link={"https://github.com/TomaMili/usepopcorn"}
+            title={"Booking application"}
+            date={"November 2025"}
+            link={"https://github.com/TomaMili/booking-app-next"}
           >
-            A platform for searching, storing, and retrieving movie information,
-            integrated with the OMDb API to provide detailed movie data.
+            Booking like app that is connected to one of my previous projects,
+            internal hotel management app. It&apos;s built using Next.js, React
+            and Supabase.
           </Project>
           <Project
-            title={"Pizza Restaurant Web Application in React"}
-            date={"February 2025"}
-            link={"https://github.com/TomaMili/fast-pizza"}
+            title={"Internal hotel management app"}
+            date={"July 2025"}
+            link={"https://github.com/TomaMili/internal-booking-app"}
           >
-            A web application for managing a pizza restaurant, featuring an
-            interactive menu, order tracking, and location-based services using
-            Geocode API and Redux for state management.
+            Hotel administration web-app, built with React and Supabase. Built
+            as an internal solution for hotels, after noticing a need for it
+            having previously worked in tourism field.
           </Project>
           <Project
             title={"Desktop Application for an Online Library in C++ Builder"}
