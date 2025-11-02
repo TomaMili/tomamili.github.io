@@ -21,7 +21,7 @@ function Aboutme() {
       </p>
 
       <a
-        href="/TomaMilicevic_CV.pdf"
+        href="/TomaMilicevic_CV_Hrv.pdf"
         download
         className="mt-10 flex items-center gap-1 justify-between"
       >
@@ -30,7 +30,23 @@ function Aboutme() {
           size="2xl"
           style={{ color: "#ffffff" }}
         />
-        <p className="font-bold text-gray-300">portfolio</p>
+        <p className="font-bold text-gray-300">
+          portfolio <i className="text-gray-400">croatian</i>
+        </p>
+      </a>
+      <a
+        href="/Toma_Milicevic_CV_English.pdf"
+        download
+        className="mt-10 flex items-center gap-1 justify-between"
+      >
+        <FontAwesomeIcon
+          icon="fa-solid fa-file-pdf"
+          size="2xl"
+          style={{ color: "#ffffff" }}
+        />
+        <p className="font-bold text-gray-300">
+          portfolio <i className="text-gray-400">english</i>
+        </p>
       </a>
     </>
   );

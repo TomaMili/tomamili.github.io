@@ -8,7 +8,7 @@ function Expirience() {
         <div className="relative">
           <h2 className="font-semibold uppercase">Lion Events Limited</h2>
           <p className="text-gray-400">
-            Logistics and organization of 10+ events in Arena Zagreb
+            Logistics and organization of 20+ events in Arena Zagreb
           </p>
           <p className="mt-3 italic text-gray-400">November 2022 - present</p>
           <span className="absolute w-4 h-4 bg-gray-400 top-7.5 -left-20"></span>
@@ -19,7 +19,7 @@ function Expirience() {
           <p className="text-gray-400">
             Logistics in a Coca-Cola distributor warehouse
           </p>
-          <p className="mt-3 italic text-gray-400">May 2024 - present</p>
+          <p className="mt-3 italic text-gray-400">May 2024 - August 2024</p>
           <span className="absolute w-4 h-4 bg-gray-400 top-7.5 -left-20"></span>
           <span className="absolute w-15 h-0.5 bg-gray-400 top-[37px] -left-20"></span>
           <span className="absolute w-0.5 h-70 bg-gray-400 -top-25 -left-[73px]"></span>
