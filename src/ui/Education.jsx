@@ -1,66 +1,73 @@
+import { CERTIFICATES, EDUCATION, INTERESTS } from "../data/content";
+import { Container, Label, Reveal, SectionHeading } from "./Primitives";
+
 function Education() {
   return (
-    <>
-      <h1 className="text-6xl text-center uppercase font-semibold text-gray-300 mb-10">
-        EDUCATION
-      </h1>
-      <div className="flex w-5/8  lg:flex-row flex-col justify-between gap-10">
-        <div className="text-gray-400 flex flex-col gap-15 mt-15">
-          <div className="relative">
-            <h2 className="text-gray-300 uppercase font-semibold">
-              Zagreb University of Applied Sciences - Informatics
-            </h2>
-            <p>Graduate Study</p>
-            <p className="italic">2025 -</p>
-            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
-            <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
-            <span className="absolute w-0.5 h-44 min-[432px]:top-10 min-[432px]:h-40 min-[784px]:h-32 min-[784px]:top-10 bg-gray-400 min-[1024px]:top-10 min-[1024px]:h-40 top-35  min-[1349px]:top-10 min-[1349px]:h-34  sm:-left-[73px] -left-[57px]"></span>
+    <section id="education" className="py-20 md:py-28">
+      <Container>
+        <SectionHeading
+          index="05"
+          label="Education & certificates"
+          title={
+            <>
+              Always learning, <span className="text-mute">on paper too.</span>
+            </>
+          }
+        />
+
+        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
+          {/* education timeline */}
+          <div className="lg:col-span-7">
+            <Label className="text-bone">Education</Label>
+            <ol className="relative mt-8 border-l border-line-strong">
+              {EDUCATION.map((e, i) => (
+                <Reveal as="li" key={e.title} delay={i * 0.06} className="relative pb-12 pl-8 last:pb-0 md:pl-10">
+                  <span
+                    aria-hidden="true"
+                    className={`absolute top-1.5 -left-[6px] size-[11px] rotate-45 ${
+                      i === 0 ? "bg-accent" : "border border-line-strong bg-ink"
+                    }`}
+                  />
+                  <span className="font-mono text-xs text-mute">{e.period}</span>
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">{e.title}</h3>
+                  <p className="mt-1 text-base text-bone/80">{e.detail}</p>
+                  <p className="mt-1 text-[15px] text-mute">{e.school}</p>
+                </Reveal>
+              ))}
+            </ol>
           </div>
-          <div className="relative">
-            <h2 className="text-gray-300 uppercase font-semibold">
-              Zagreb University of Applied Sciences - Informatics
-            </h2>
-            <p>Undergraduate Study - GPA - 4.33</p>
-            <p className="italic">2022 - 2025</p>
-            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
-            <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
-          </div>
-          <div className="relative">
-            <h2 className="text-gray-300 uppercase font-semibold">
-              High School fra Slavko Barbarić - Gymnasium
-            </h2>
-            <p>
-              [2nd place at the national competition in bridge modeling and
-              construction]
-            </p>
-            <p className="italic">2022</p>
-            <span className="absolute w-4 h-4 bg-gray-400 top-7.5 sm:-left-20 -left-16"></span>
-            <span className="absolute sm:w-15 w-10 h-0.5 bg-gray-400 top-[37px] sm:-left-20 -left-14"></span>
-            <span className="absolute w-0.5 h-44 min-[432px]:-top-30 min-[432px]:h-40 min-[784px]:h-32 min-[784px]:-top-24 bg-gray-400 min-[1024px]:-top-30 min-[1024px]:h-40 -top-35  min-[1349px]:-top-25 min-[1349px]:h-34  sm:-left-[73px] -left-[57px]"></span>
+
+          {/* certificates */}
+          <div className="lg:col-span-5">
+            <Label className="text-bone">Certificates</Label>
+            <ul className="mt-8 space-y-3">
+              {CERTIFICATES.map((c, i) => (
+                <Reveal
+                  as="li"
+                  key={c.title}
+                  delay={i * 0.06}
+                  className="rounded-md border border-line bg-ink-2/60 p-5 transition-colors duration-300 hover:border-line-strong"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-lg leading-snug font-semibold tracking-tight">{c.title}</h3>
+                    <span className="shrink-0 pt-1 font-mono text-[11px] text-mute">{c.date}</span>
+                  </div>
+                  <p className="mt-1 text-[15px] text-accent">{c.issuer}</p>
+                  {c.id && (
+                    <p className="mt-3 font-mono text-[10px] break-all text-dim md:text-[11px]">ID {c.id}</p>
+                  )}
+                </Reveal>
+              ))}
+            </ul>
+
+            <Reveal className="mt-10 border-t border-line pt-6">
+              <Label>Off the clock</Label>
+              <p className="mt-3 text-xl font-medium tracking-tight">{INTERESTS.join(" · ")}</p>
+            </Reveal>
           </div>
         </div>
-        <div className="text-gray-400 mt-15 gap-10 flex lg:flex-col justify-between">
-          <div className="">
-            <h2 className="mb-4 text-gray-300 font-semibold uppercase">
-              The Ultimate React course: React, Next.js, Redux & more - Udemy
-            </h2>
-            <p className="mb-2">
-              Credential ID UC-976d89e8-4d86-47be-8ed2-f61a6bab2304
-            </p>
-            <p className="italic">November 2025</p>
-          </div>
-          <div>
-            <h2 className="mb-4 text-gray-300 font-semibold uppercase">
-              The complete JavaScript Course – Udemy
-            </h2>
-            <p className="mb-2">
-              Credential ID: UC-ad4548b2-2168-4248-bc18-f5f41107e905
-            </p>
-            <p className="italic">April 2023</p>
-          </div>
-        </div>
-      </div>
-    </>
+      </Container>
+    </section>
   );
 }
 

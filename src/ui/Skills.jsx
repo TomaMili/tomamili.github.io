@@ -1,93 +1,58 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from "react-infinite-logo-slider";
+import { SKILLS } from "../data/content";
+import { Container, Label, Reveal, SectionHeading } from "./Primitives";
 
 function Skills() {
   return (
-    <>
-      <h1 className="text-6xl text-center uppercase font-semibold text-gray-300">
-        Skills
-      </h1>
-      <p className="text-center sm:text-xl text-lg mt-20 text-gray-400 sm:tracking-widest sm:leading-9 leading-7 lg:w-4xl w-7/8">
-        My strongest skills are tied with web-app development, with a good sense
-        of teamwork and leadership. I consider myself very adaptable to
-        different situations and enviroments.
-      </p>
-      <div className="mt-10 w-5xl border-gray-500 border-solid border-x-2">
-        <Slider
-          width="200px"
-          duration={40}
-          pauseOnHover={true}
-          blurBorders={false}
-          blurBorderColor={"#000"}
-        >
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-brands fa-react"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">React.js</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-brands fa-html5"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">HTML5</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-brands fa-css3-alt"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">CSS3</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-brands fa-js"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">JavaScript</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-brands fa-node"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">Node.js</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <FontAwesomeIcon
-              icon="fa-solid fa-database"
-              size="2xl"
-              style={{ color: "#ffffff" }}
-            />
-            <p className="text-gray-300 ml-2 font-semibold">SQL </p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <img src="/nextjs.svg" alt="redux" width="40px" />
-            <p className="text-gray-300 ml-2 font-semibold">Next.js</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <img src="/tailwindcss.svg" alt="tailwind" width="40px" />
-            <p className="text-gray-300 ml-2 font-semibold">Tailwind</p>
-          </Slider.Slide>
-          <Slider.Slide>
-            <img src="/reduxjs.svg" alt="redux" width="35px" />
-            <p className="text-gray-300 ml-2 font-semibold">Redux.js</p>
-          </Slider.Slide>
-        </Slider>
-      </div>
-      <p className="text-center sm:text-xl text-lg mt-20 text-gray-400 sm:tracking-widest sm:leading-9 leading-7 lg:w-4xl w-7/8">
-        Besides these skills, I have a good knowledge of: C++, PHP, Python, as
-        well as some creative platforms such as: Figma, Adobe Package, Office
-        365
-      </p>
-    </>
+    <section id="skills" className="py-20 md:py-28">
+      <Container>
+        <SectionHeading
+          index="04"
+          label="Skills"
+          title={
+            <>
+              Code <span className="text-mute">and</span> craft.
+            </>
+          }
+        />
+
+        {/* tiles separated by 1px "grout" */}
+        <div className="grid gap-px overflow-hidden rounded-md border border-line bg-line md:grid-cols-3">
+          {SKILLS.map((s, i) => (
+            <Reveal
+              key={s.group}
+              delay={i * 0.06}
+              className={`group relative bg-ink p-6 transition-colors duration-500 hover:bg-ink-2 md:p-10 ${
+                s.wide ? "md:col-span-2" : ""
+              }`}
+            >
+              <span
+                aria-hidden="true"
+                className="absolute top-0 left-0 h-px w-0 bg-accent transition-[width] duration-700 ease-[var(--ease-out-expo)] group-hover:w-full"
+              />
+              <div className="mb-8 flex items-center justify-between md:mb-12">
+                <Label className="text-bone">{s.group}</Label>
+                <span className="font-mono text-[11px] text-dim">
+                  {String(s.items.length).padStart(2, "0")}
+                </span>
+              </div>
+              <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                {s.items.map((item, j) => (
+                  <li
+                    key={item}
+                    className={`text-2xl font-medium tracking-tight md:text-[1.75rem] ${
+                      s.muted ? "text-mute" : ""
+                    }`}
+                  >
+                    {item}
+                    {j < s.items.length - 1 && <span className="ml-5 text-dim">/</span>}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }
 

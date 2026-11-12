@@ -1,40 +1,38 @@
-import AppLayout from "./ui/AppLayout";
-import { library } from "@fortawesome/fontawesome-svg-core";
-
-import {
-  fas,
-  faFilePdf,
-  faDatabase,
-  faN,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faTwitter,
-  faGithub,
-  faLinkedin,
-  faReact,
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faNode,
-} from "@fortawesome/free-brands-svg-icons";
-
-library.add(
-  fas,
-  faTwitter,
-  faGithub,
-  faLinkedin,
-  faFilePdf,
-  faReact,
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faNode,
-  faDatabase,
-  faN
-);
+import { MotionConfig } from "framer-motion";
+import Nav from "./ui/Nav";
+import Hero from "./ui/Hero";
+import Marquee from "./ui/Marquee";
+import Work from "./ui/Work";
+import About from "./ui/About";
+import Experience from "./ui/Experience";
+import Skills from "./ui/Skills";
+import Education from "./ui/Education";
+import Contact from "./ui/Contact";
 
 function App() {
-  return <AppLayout />;
+  return (
+    <MotionConfig reducedMotion="user">
+      <div className="grain">
+        <a
+          href="#work"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[80] focus:bg-accent focus:px-4 focus:py-2 focus:text-ink"
+        >
+          Skip to content
+        </a>
+        <Nav />
+        <main>
+          <Hero />
+          <Marquee />
+          <Work />
+          <About />
+          <Experience />
+          <Skills />
+          <Education />
+          <Contact />
+        </main>
+      </div>
+    </MotionConfig>
+  );
 }
 
 export default App;
